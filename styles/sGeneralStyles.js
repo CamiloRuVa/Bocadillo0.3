@@ -7,7 +7,16 @@ const styles = StyleSheet.create({
       justifyContent:'space-between',
       margin:15,
       borderRadius:10,
-      maxHeight: 50
+      maxHeight: 50,
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 6,
+      },
+      shadowOpacity: 0.37,
+      shadowRadius: 7.49,
+
+      elevation: 12,
     },
     imgContainer:{
       borderColor: 'black',
