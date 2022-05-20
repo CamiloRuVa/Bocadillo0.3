@@ -11,11 +11,12 @@ import ScreenGeneral from '../screens/screenGeneral';
 import ScreenInicio from '../screens/screenInicio';
 import { NavigationContainer } from '@react-navigation/native';
 
+
 export function DrawerContent(props){
     return(
       <View style={stylesDrawer.drawerContainer}>
           <DrawerContentScrollView style={stylesDrawer.midSection}>
-          <DrawerItem                
+            <DrawerItem                
                 style={stylesDrawer.item}                
                 icon={() => ( <Icon name="baguette" size={30} color={'white'} /> )}
                 label={() => ( <Text style={stylesDrawer.label}> Menús </Text> )}
@@ -30,22 +31,20 @@ export function DrawerContent(props){
             <DrawerItem
                 style={stylesDrawer.item}                
                 icon={() => ( <Icon name="emoticon" size={30} color={'white'} /> )}
-                label={() => ( <Text style={stylesDrawer.label}> Mi Perfil </Text> )}
-                onPress={() => {}}                
+                label={() => ( <Text style={stylesDrawer.label}> Mi Perfil </Text> )}                    
             />
           </DrawerContentScrollView>
           <View style={stylesDrawer.bottomSection}>
-            <DrawerItem
-                style={stylesDrawer.item}                
-                icon={() => ( <Icon name="exit-to-app" size={30} color={'white'} /> )}
-                label={() => ( <Text style={stylesDrawer.label}> Cerrar Sesión </Text> )}
-                onPress={() => {props.navigation.navigate('Inicio')}}                                
-            />        
+            <DrawerItem                
+                    style={stylesDrawer.item}                
+                    icon={() => ( <Icon name="exit-to-app" size={30} color={'white'} /> )}
+                    label={() => ( <Text style={stylesDrawer.label}> Cerrar Sesión </Text> )}
+                    onPress={() => {props.navigation.navigate('Inicio')}}                                
+                />
           </View>              
       </View>
     );
  }
-
 
 const stylesDrawer = StyleSheet.create({
     drawerContainer:{
@@ -53,7 +52,7 @@ const stylesDrawer = StyleSheet.create({
         backgroundColor:'white'
     },
     midSection:{
-        marginTop:'35%',
+        marginTop:'20%',
         borderTopColor: '#cb0519',        
         borderTopWidth: 2 
     },
